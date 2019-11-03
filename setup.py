@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="pitu",
-    version="0.1.0",
+    version="0.2.0",
     author="kenblikylee",
     author_email="kenblikylee@126.com",
     description="python 开源命令行P图工具。",
