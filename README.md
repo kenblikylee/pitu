@@ -69,11 +69,14 @@ pitu text photo.jpg '我的P图工具' 300 100 50 cyan yh
 
 ### 拼图 pin
 
-pitu pin <x|y> &lt;photo1_path photo2_path [photo3_path ... photon_path]&gt;
+pitu pin <x|y> &lt;photo1_path photo2_path [photo3_path ... photon_path]&gt; [diff]
 
 ``` sh
 pitu pin x zoom-photo.jpg rotate-photo.jpg flip-photo.jpg cut-photo.jpg gray-photo.jpg  text-photo.jpg
 pitu pin y zoom-photo.jpg rotate-photo.jpg flip-photo.jpg cut-photo.jpg gray-photo.jpg  text-photo.jpg
+
+pitu pin x zoom-photo.jpg rotate-photo.jpg flip-photo.jpg cut-photo.jpg gray-photo.jpg  text-photo.jpg diff
+pitu pin y zoom-photo.jpg rotate-photo.jpg flip-photo.jpg cut-photo.jpg gray-photo.jpg  text-photo.jpg diff
 ```
 
 ### 头像 avatar
@@ -94,4 +97,15 @@ pitu cover photo.jpg
 pitu cover photo.jpg ex
 pitu cover photo.jpg ce '16:9'
 pitu cover photo.jpg ex '16:9'
+```
+
+### 9宫格和任意网格 grid
+
+pitu grid &lt;photo1_path photo2_path [photo3_path ... photon_path]&gt;  \ <br>
+    [':rows=行数 :cols=列数 :width=宽 :height=高 :gap=间距 :padding=边距 :color=背景色']
+
+``` sh
+pitu grid 1.jpg 2.jpg 3.jpg 4.jpg 5.jpg 6.jpg 7.jpg 8.jpg 9.jpg
+
+pitu grid 1.jpg 2.jpg 3.jpg 4.jpg ':rows=2 :cols=2 :width=600 :height=300 :gap=10 :padding=20 :color=#555'
 ```
