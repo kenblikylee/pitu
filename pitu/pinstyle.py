@@ -75,7 +75,13 @@ class PinStyleGrid(PinStyleABC):
         cell_hh = cell_h + gap
         for i in range(rows):
             if k >= photos_num: break
+            # 垂直边缘对齐处理
+            if i > 0 and (i == rows-1):
+                y = height - cell_h - padding
             for j in range(cols):
+                # 水平边缘对齐处理
+                if j > 0 and (j == cols-1):
+                    x = width - cell_w - padding
                 canvas.paste(photos[k], x, y)
                 k += 1
                 if k >= photos_num: break
